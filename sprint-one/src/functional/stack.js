@@ -22,7 +22,7 @@ var Stack = function() {
 
   someInstance.size = function() {
     return size;
-  }
+  };
 
   return someInstance;
 };
