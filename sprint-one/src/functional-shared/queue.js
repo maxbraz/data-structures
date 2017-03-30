@@ -9,7 +9,7 @@ var Queue = function() {
   return someInstance;
 };
 
-var queueMethods = {};
+queueMethods = {};
 
 queueMethods.enqueue = function(value) {
   this.storage[this.first] = value;
@@ -24,7 +24,6 @@ queueMethods.dequeue = function() {
     this.count--;
   }
   return temp;
-};
 
 queueMethods.size = function() {
   return this.count;
