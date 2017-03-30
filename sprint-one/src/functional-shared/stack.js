@@ -29,3 +29,4 @@ var stackMethods = {
     return this.count;
   }
 };
+
