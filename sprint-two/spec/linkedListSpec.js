@@ -53,6 +53,6 @@ describe('linkedList', function() {
 
   // add more tests here to test the functionality of linkedList
   it('should return null if removeHead is called when linkedList is empty', function() {
-    expect(linkedList.removeHead().to.eql(null));
+    expect(linkedList.removeHead()).to.equal(null);
   });
 });
