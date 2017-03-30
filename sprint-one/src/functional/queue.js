@@ -27,4 +27,7 @@ var Queue = function() {
   someInstance.size = function() {
     return count;
   };
+
+  return someInstance;
 };
+

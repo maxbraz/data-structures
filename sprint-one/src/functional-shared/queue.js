@@ -9,7 +9,20 @@ var Queue = function() {
   return someInstance;
 };
 
-queueMethods = {};
+var queueMethods = {};
+
+queueMethods.dequeue = function() {
+  var temp = this.storage[this.firstInLine];
+  delete this.storage[this.firstInLine];
+  
+  if (this.len > 0) {
+    this.len--;
+  }
+  
+  this.firstInLine++;
+
+  return temp;
+};
 
 queueMethods.enqueue = function(value) {
   this.storage[this.first] = value;
@@ -24,6 +37,7 @@ queueMethods.dequeue = function() {
     this.count--;
   }
   return temp;
+};
 
 queueMethods.size = function() {
   return this.count;
