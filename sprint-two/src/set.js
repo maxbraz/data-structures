@@ -11,15 +11,13 @@ setPrototype.add = function(item) {
 };
 
 setPrototype.contains = function(item) {
-  var result = false;
-
-  _.each(this._storage, function(str) {
-    if (str === item) {
-      result = true;
+  for (var key in this._storage) {
+    if (this._storage[key] === item) {
+      return true;
     }
-  });
+  }
 
-  return result;
+  return false;
 };
 
 setPrototype.remove = function(item) {
