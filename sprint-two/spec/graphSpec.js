@@ -68,4 +68,21 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+  it('should return true for a node that the graph contains', function() {
+    graph.addNode(5);
+    expect(graph.contains(5)).to.equal(true);
+  });
+
+  it('should return true for an edge between 2 nodes that the graph contains', function() {
+    graph.addNode(1);
+    graph.addNode(2);
+    graph.addEdge(1, 2);
+    expect(graph.hasEdge(1, 2)).to.equal(true);
+  });
+
+  it('should not add edges between 2 nodes that the graph does not contain', function() {
+    graph.addEdge(1, 2);
+    expect(graph.hasEdge(1, 2)).to.equal(false);
+  });
 });
