@@ -33,14 +33,12 @@ Graph.prototype.removeNode = function(node) {
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
 Graph.prototype.hasEdge = function(fromNode, toNode) {
-  if (this.storage.hasOwnProperty(fromNode) && this.storage.hasOwnProperty(toNode)) {
-    return this.storage[fromNode].includes(toNode) && this.storage[toNode].includes(fromNode);
-  }
+  return this.storage[fromNode].includes(toNode) && this.storage[toNode].includes(fromNode);
 };
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
-  if (this.storage.hasOwnProperty(fromNode) && this.storage.hasOwnProperty(toNode)) {
+  if (this.storage[fromNode] && this.storage[toNode]) {
     this.storage[fromNode].push(toNode);
     this.storage[toNode].push(fromNode);
   }
@@ -48,7 +46,7 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
 
 // Remove an edge between any two specified (by value) nodes.
 Graph.prototype.removeEdge = function(fromNode, toNode) {
-  if (this.storage.hasOwnProperty(fromNode) && this.storage.hasOwnProperty(toNode)) {
+  //if (this.storage.hasOwnProperty(fromNode) && this.storage.hasOwnProperty(toNode)) {
     var fromNodeArr = this.storage[fromNode];
     var toNodeArr = this.storage[toNode];
 
@@ -63,7 +61,7 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
         toNodeArr.splice(j, 1);
       }
     }
-  }
+  //}
 };
 
 // Pass in a callback which will be executed on each node of the graph.

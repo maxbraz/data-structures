@@ -80,9 +80,4 @@ describe('graph', function() {
     graph.addEdge(1, 2);
     expect(graph.hasEdge(1, 2)).to.equal(true);
   });
-
-  it('should not add edges between 2 nodes that the graph does not contain', function() {
-    graph.addEdge(1, 2);
-    expect(graph.hasEdge(1, 2)).to.equal(false);
-  });
 });
