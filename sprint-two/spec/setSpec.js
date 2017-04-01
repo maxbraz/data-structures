@@ -24,6 +24,7 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  // new (and improved) tests
   it('should contain a value that was added', function() {
     set.add('This is a set');
     expect(set.contains('This is a set')).to.equal(true);

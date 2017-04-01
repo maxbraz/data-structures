@@ -38,7 +38,6 @@ describe('binarySearchTree', function() {
   });
 
   // new (and improved) tests
-  
   it('should pass tree nodes to the callback in pre-order depth first traversal pattern', function() {
     var array = [];
     var func = function(value) { array.push(value); };

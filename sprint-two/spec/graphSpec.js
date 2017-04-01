@@ -69,6 +69,7 @@ describe('graph', function() {
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
 
+  // new (and improved) tests
   it('should return true for a node that the graph contains', function() {
     graph.addNode(5);
     expect(graph.contains(5)).to.equal(true);
